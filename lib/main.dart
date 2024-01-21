@@ -1,13 +1,19 @@
 import 'dart:async';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:practice_app/firebase_options.dart';
 import 'package:practice_app/top_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await _setupFlavor();
+  final firebase = await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  print(firebase.options);
   runApp(const MyApp());
 }
 
@@ -18,6 +24,8 @@ Future _setupFlavor() async {
     throw ArgumentError('Not available flavor');
   }
   print(kDebugMode);
+
+  ///デバックモードかどうか見ている。trueはデバックモード
   if (kDebugMode) {
     print('FLAVOR: $flavor');
 

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "648094486718",
+    "project_id": "practicedevelop-df8de",
+    "storage_bucket": "practicedevelop-df8de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648094486718:android:2b8cdb7aff632cc2c40eef",
+        "android_client_info": {
+          "package_name": "com.example.practice_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApPZ87SemF8QG0RMcLhHxTh_yxZUZIXrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,6 @@
+{
+    "flavor": "prod",
+    "appIdSuffix": "",
+    "appName": "PracticeApp",
+    "app": "prod"
+}

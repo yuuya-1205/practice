@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -25,7 +28,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -43,39 +49,21 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCYO4WIMD8H4fsEcSzjvU7uOITE3TiEMDE',
-    appId: '1:648094486718:web:d55042a5184ce1a0c40eef',
-    messagingSenderId: '648094486718',
-    projectId: 'practicedevelop-df8de',
-    authDomain: 'practicedevelop-df8de.firebaseapp.com',
-    storageBucket: 'practicedevelop-df8de.appspot.com',
-    measurementId: 'G-ERN61CGY5D',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyApPZ87SemF8QG0RMcLhHxTh_yxZUZIXrU',
-    appId: '1:648094486718:android:2b8cdb7aff632cc2c40eef',
-    messagingSenderId: '648094486718',
-    projectId: 'practicedevelop-df8de',
-    storageBucket: 'practicedevelop-df8de.appspot.com',
+    apiKey: String.fromEnvironment('firebaseAndroidApiKey'),
+    appId: String.fromEnvironment('firebaseAndroidAppId'),
+    messagingSenderId:
+        String.fromEnvironment('firebaseAndroidMessagingSenderId'),
+    projectId: String.fromEnvironment('firebaseAndroidProjectId'),
+    storageBucket: String.fromEnvironment('firebaseAndroidStorageBucket'),
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBf6Ade-BmPESLDjwbbfVmriIri8lT4o-M',
-    appId: '1:648094486718:ios:3c41e316f88704dcc40eef',
-    messagingSenderId: '648094486718',
-    projectId: 'practicedevelop-df8de',
-    storageBucket: 'practicedevelop-df8de.appspot.com',
-    iosBundleId: 'com.practice.app',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBf6Ade-BmPESLDjwbbfVmriIri8lT4o-M',
-    appId: '1:648094486718:ios:f4c9be8c27bb50a3c40eef',
-    messagingSenderId: '648094486718',
-    projectId: 'practicedevelop-df8de',
-    storageBucket: 'practicedevelop-df8de.appspot.com',
-    iosBundleId: 'com.example.practiceApp.RunnerTests',
+    apiKey: String.fromEnvironment('firebaseIosApiKey'),
+    appId: String.fromEnvironment('firebaseIosAppId'),
+    messagingSenderId: String.fromEnvironment('firebaseIosMessagingSenderId'),
+    projectId: String.fromEnvironment('firebaseIosProjectId'),
+    storageBucket: String.fromEnvironment('firebaseIosStorageBucket'),
+    iosBundleId: String.fromEnvironment('firebaseIosIosBundleId'),
   );
 }

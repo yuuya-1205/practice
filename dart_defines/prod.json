@@ -2,5 +2,16 @@
     "flavor": "prod",
     "appIdSuffix": "",
     "appName": "PracticeApp",
-    "app": "prod"
+    "app": "prod",
+    "firebaseAndroidApiKey": "AIzaSyAeAh1PThGKIepj-GuDKGrx-br-9oXwvZ8",
+    "firebaseAndroidAppId": "1:743804498273:android:c9d7236b63b2919e701520",
+    "firebaseAndroidMessagingSenderId": "743804498273",
+    "firebaseAndroidProjectId": "practiceprod-761d3",
+    "firebaseAndroidStorageBucket": "practiceprod-761d3.appspot.com",
+    "firebaseIosApiKey": "AIzaSyDChW2M3fMDm0kJYo9H6_1zNwta4mzh10Y",
+    "firebaseIosAppId": "1:743804498273:ios:dd8f379d65256880701520",
+    "firebaseIosMessagingSenderId": "743804498273",
+    "firebaseIosProjectId": "practiceprod-761d3",
+    "firebaseIosStorageBucket": "practiceprod-761d3.appspot.com",
+    "firebaseIosIosBundleId": "com.practice.app"
 }

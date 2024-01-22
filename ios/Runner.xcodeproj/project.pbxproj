@@ -116,7 +116,6 @@
 				1EBBC860F289E825376A3D59 /* Pods-RunnerTests.release.xcconfig */,
 				16E340C97C26B45C8074BCD0 /* Pods-RunnerTests.profile.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -196,6 +195,7 @@
 			buildPhases = (
 				AC2E5EF0427580129607B863 /* [CP] Check Pods Manifest.lock */,
 				9740EEB61CF901F6004384FC /* Run Script */,
+				4EBF984A2B5E38DC00B5CE1E /* Firebase Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
@@ -290,6 +290,27 @@
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin";
 		};
+		4EBF984A2B5E38DC00B5CE1E /* Firebase Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"",
+			);
+			inputPaths = (
+			);
+			name = "Firebase Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${SRCROOT}/Runner/GoogleService-Info.plist",
+				"${SRCROOT}/firebase_app_id_file.json",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -f ${SRCROOT}/Runner/GoogleService-Info-${flavor}.plist ${SRCROOT}/Runner/GoogleService-Info.plist\ncp -f ${SRCROOT}/firebase_app_id_file_${flavor}.json ${SRCROOT}/firebase_app_id_file.json\n";
+		};
 		8A072801F97F008E7ABDCCF8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,7 +341,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n";
 		};
 		AC2E5EF0427580129607B863 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

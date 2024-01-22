@@ -2,5 +2,16 @@
     "flavor": "dev",
     "appIdSuffix": ".dev",
     "appName": "PracticeApp dev",
-    "app": "dev"
+    "app": "dev",
+    "firebaseAndroidApiKey": "AIzaSyApPZ87SemF8QG0RMcLhHxTh_yxZUZIXrU",
+    "firebaseAndroidAppId": "1: 648094486718:android: 2b8cdb7aff632cc2c40eef",
+    "firebaseAndroidMessagingSenderId": "648094486718",
+    "firebaseAndroidProjectId": "practicedevelop-df8de",
+    "firebaseAndroidStorageBucket": "practicedevelop-df8de.appspot.com",
+    "firebaseIosApiKey": "AIzaSyBf6Ade-BmPESLDjwbbfVmriIri8lT4o-M",
+    "firebaseIosAppId": "1: 648094486718:ios: 3c41e316f88704dcc40eef",
+    "firebaseIosMessagingSenderId": "648094486718",
+    "firebaseIosProjectId": "practicedevelop-df8de",
+    "firebaseIosStorageBucket": "practicedevelop-df8de.appspot.com",
+    "firebaseIosIosBundleId": "com.practice.app"
 }
